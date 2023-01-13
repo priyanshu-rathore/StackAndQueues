@@ -10,7 +10,7 @@ namespace StackAndQueues
     {
         node<T> top;
 
-        public void push(T value)
+        public void push(T value)//UC1
         {
             node<T> current = new node<T>(value);
 
@@ -25,6 +25,34 @@ namespace StackAndQueues
 
             top = current;
             Console.WriteLine(top.data+" is added to the stack");
+        }
+
+        public void peek()//UC2
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+            }
+            else
+            {
+                Console.WriteLine(top.data);
+            }
+        }
+
+        public void pop()//UC2
+        {
+            node<T> current = top;
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty nothing to delete");
+            }
+            else
+            {
+                Console.WriteLine(current.data+" is popped");
+
+                current = current.next;
+            }
+            top =current;
         }
 
         public void display() {
