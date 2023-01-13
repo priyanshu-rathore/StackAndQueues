@@ -30,6 +30,19 @@ namespace StackAndQueues
 
             }
         }
+
+        public void dequeue()//UC4
+        {
+            if (head == null)
+            {
+                Console.WriteLine("queue is empty");
+            }
+            else
+            {
+                Console.WriteLine(head.data + " is dequeued");
+                head = head.next;
+            }
+        }
         public void display()
         {
             node<T> temp = head;
