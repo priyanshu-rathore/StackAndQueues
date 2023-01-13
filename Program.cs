@@ -4,14 +4,11 @@
     {
         static void Main(string[] args)
         {
-            stack<int> list = new stack<int>();
+            queue<int> list = new queue<int>();
 
-            list.push(70);
-            list.push(30);
-            list.push(56);
-            list.peek();
-            list.pop();
-            list.peek();
+            list.enqueue(56);
+            list.enqueue(30);
+            list.enqueue(70);
             list.display();
         }
     }
